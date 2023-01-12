@@ -20,6 +20,9 @@ public class User {
 	String email;
 	@Column(name="first_name")
 	String firstName;
+	@Column(name="profile_picture_link")
+	String profilePicLink;
+	
 	
 	public User() {}
 	
@@ -28,6 +31,14 @@ public class User {
 		this.password = password;
 		this.email = email;
 		this.firstName = firstname;
+	}
+	
+	public User(String userName, String password, String email, String firstname, String profilePicLink ) {
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.firstName = firstname;
+		this.profilePicLink = profilePicLink;
 	}
 
 	public Long getId() {
@@ -68,6 +79,14 @@ public class User {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+	
+	public void setProfilePicLink(String profilePicLink) {
+		this.profilePicLink = profilePicLink;
+	}
+	
+	public String getProfilePicLink() {
+		return profilePicLink;
 	}
 	
 	
